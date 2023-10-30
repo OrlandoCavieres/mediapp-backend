@@ -1,0 +1,149 @@
+POST http://localhost:9000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "yosoy@cl.cl",
+  "password": "Hola"
+}
+
+
+###
+POST http://localhost:9000/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "map@mp.ka",
+  "password": "Hola"
+}
+
+
+###
+POST http://localhost:9000/api/auth/patient/onboard
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1wQG1wLmthIiwiaWQiOjEzLCJpYXQiOjE2OTg1MDgxNjl9.0TUIvRyKiG2-8uwybH8aC76lY2ZJ5_9fI2rUkrRItrM
+
+{
+  "name": "hola",
+  "city": "ahjksdbjkasbhjdbqwk yuiwhqdyu gashjbdkas hgdyqwg asjkbd qwyugvasbn dkwyjqgaetyuqwv asdbkikd uygwqyuidfg ausvd ,awklgyqwyute dfsatghdv aszxgfvdtyasrdfqwt daskujdgqwyu"
+}
+
+
+###
+GET http://localhost:9000/api/questions
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI
+
+
+###
+GET http://localhost:9000/api/professionals
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI
+
+
+###
+GET http://localhost:9000/api/professionals/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI
+
+
+###
+DELETE http://localhost:9000/api/professionals/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI
+
+
+###
+PUT http://localhost:9000/api/professionals/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI
+
+{
+  "name": "Nombre 1"
+}
+
+
+###
+POST http://localhost:9000/api/professionals
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI
+
+{
+  "name": "Nombre 2",
+  "specialty": "Especialidad 2"
+}
+
+
+###
+GET http://localhost:9000/api/questions
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI
+
+
+###
+GET http://localhost:9000/api/questions/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI
+
+
+###
+POST http://localhost:9000/api/questions
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI
+
+{
+  "statement": "hola",
+  "alternatives": [
+    {
+      "sentence": "Sentence 1",
+      "weight": 3
+    },
+    {
+      "sentence": "Sentence 2",
+      "weight": 1
+    },
+    {
+      "sentence": "Sentence 3",
+      "weight": 2
+    }
+  ]
+}
+
+
+###
+PUT http://localhost:9000/api/questions/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI
+
+{
+  "statement": "hola",
+  "alternatives": [
+    {
+      "sentence": "Sentence 6",
+      "weight": 3
+    },
+   {
+      "sentence": "Sentence 7",
+     "weight": 1
+   },
+   {
+      "sentence": "Sentence 9",
+      "weight": 2
+    }
+  ]
+}
+
+
+###
+POST http://localhost:9000/api/result-diagnostic
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI
+
+{
+  "total": 9
+}
+
+
+###
+GET http://localhost:9000/api/patient-assigns
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inlvc295QGNsLmNsIiwiaWQiOjQsImlhdCI6MTY5ODUxNDY0M30.rLyNN59BG846YVlBwCI254Dgu0NtAEU3GZEfk4BXvzI

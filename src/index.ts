@@ -7,9 +7,9 @@ import { AppDataSource } from "./data-source"
 
 // Librerías asociadas al framework del backend
 import * as express from 'express'
+import * as cors from 'cors'
 import ApiRouter from "./api/ApiRouter"
 import { initialSeed } from "./initialSeed"
-
 
 // Inicializar base de datos y verificar información
 AppDataSource.initialize()
@@ -19,10 +19,17 @@ AppDataSource.initialize()
     })
     .catch(error => console.log(error))
 
+// Opciones para permisos CORS
+const corsSetup = cors({
+    origin: ['http://mediapp.sirandokcloud.me', 'https://mediapp.sirandokcloud.me',
+        'http://localhost', 'https://localhost'],
+    optionsSuccessStatus: 200
+})
 
 // Crear aplicación de Express
 const app = express()
 app.use(express.json())
+app.use(corsSetup)
 
 // Rutas de la API
 app.use(ApiRouter)

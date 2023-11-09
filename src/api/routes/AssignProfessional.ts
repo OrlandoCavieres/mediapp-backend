@@ -40,16 +40,17 @@ router.post('/result-diagnostic', authToken,
                 success: false
             })
         }
-
-        const maxScore = await AppDataSource.getRepository(Question).count() * 3
+        const minScore =  await AppDataSource.getRepository(Question).count()
+        const maxScore = minScore * 3
         const [profs, profsCount] = await AppDataSource.getRepository(Professional).findAndCount()
-        const indexCut = Math.ceil(maxScore / profsCount)
+        const indexCut = Math.ceil((maxScore - minScore) / profsCount)
         const indexes = profs.map((value, index) => index * indexCut)
 
         let profSelected: Professional = null
+        let adjustedValue = result.total - minScore
 
         for (let i = 0; i < indexes.length - 1; i++) {
-            if (result.total >= indexes[i] && result.total < indexes[i + 1]) {
+            if (adjustedValue >= indexes[i] && adjustedValue < indexes[i + 1]) {
                 profSelected = profs[i]
             }
         }
